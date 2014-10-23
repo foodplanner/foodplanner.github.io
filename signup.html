@@ -1,7 +1,3 @@
-
-
-
-
 <head>
 	<meta charset="utf-8">
 	<title>FoodPlanner</title>
@@ -15,36 +11,9 @@
 	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type='text/javascript' src='js/custom.js'></script>
-	<script>
-		$(document).ready(function() {
-			$('img').click(function(){
-				$('img').animate({  borderSpacing: 90 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-				$('img').animate({  borderSpacing: 0 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-				$('img').animate({  borderSpacing: -360*5 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-			});
-		});
-	</script>
+
+
+
 </head>
 <body>
 	<div class="row">
@@ -59,25 +28,55 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Contact</a></li>  
 				</ul> 
 			</div>
 		</nav>
 	</div>
 	<div class="container front">
-		<div class="row">
-			<img class ="face" src="img/food.png">
-			<h1>FOODPLANNER</h1>
-			<p>Menu, re-imagined.</p>
-		</div>
-		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login">
-				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
-		</div>
-
+		<label class="signup">Sign Up Form</label>
+		<form role="form">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" class="form-control" id="username" placeholder="Username">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Name">
+			</div>
+			<label for="dietinfo">Diet Information</label>
+			<select class="form-control">
+				<option value="o1">Non-vegetarian</option>
+				<option value="o1">Vegetarian</option>
+				<option value="o1">Vegan</option>
+			</select>
+			<br>
+			<label for="preference">Personal Cuisine Preference</label>
+			<br>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="ic1" value="o1"> African
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="ic2" value="o2"> American
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="ic3" value="o3"> Asian
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="ic4" value="o4"> European
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="ic5" value="o5"> Oceanian
+			</label>
+			<br>
+			<br>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
