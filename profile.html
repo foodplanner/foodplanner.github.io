@@ -1,7 +1,3 @@
-
-
-
-
 <head>
 	<meta charset="utf-8">
 	<title>FoodPlanner</title>
@@ -15,36 +11,6 @@
 	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type='text/javascript' src='js/custom.js'></script>
-	<script>
-		$(document).ready(function() {
-			$('img').click(function(){
-				$('img').animate({  borderSpacing: 90 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-				$('img').animate({  borderSpacing: 0 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-				$('img').animate({  borderSpacing: -360*5 }, {
-					step: function(now,fx) {
-						$(this).css('-webkit-transform','rotate('+now+'deg)'); 
-						$(this).css('-moz-transform','rotate('+now+'deg)');
-						$(this).css('transform','rotate('+now+'deg)');
-					},
-					duration:'slow'
-				},'linear');
-			});
-		});
-	</script>
 </head>
 <body>
 	<div class="row">
@@ -69,18 +35,14 @@
 	</div>
 	<div class="container front">
 		<div class="row">
-			<img class ="face" src="img/food.png">
-			<h1>FOODPLANNER</h1>
-			<p>Menu, re-imagined.</p>
+			<h1>Username</h1>
+			<ul>
+				<li>Name</li>
+				<li>Personal Preference</li>
+				<li>Diet Info</li>
+				<li>Weight</li>
+			</ul>
 		</div>
-		<form method="POST" action="login.php">
-			<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
-				<input type="submit" value="Login">
-				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
-			</div>
-		</form>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>

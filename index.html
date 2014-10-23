@@ -55,13 +55,14 @@
 					<span class="glyphicon glyphicon-arrow-down"></span>
 					MENU
 				</button>
-				<a class="navbar-brand logo" href="#">FOODPLANNER</a>
+				<a class="navbar-brand logo">FOODPLANNER</a>
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="password.html">Change Password</a></li>
+					<!--<li><a href="#">Home</a></li>-->
+					<li><a href="#">Menu</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<!--<li><a href="password.html">Change Password</a></li>-->
 				</ul> 
 			</div>
 		</nav>
@@ -72,12 +73,14 @@
 			<h1>FOODPLANNER</h1>
 			<p>Menu, re-imagined.</p>
 		</div>
-		<div class="login">
+		<form method="POST" action="login.php">
+			<div class="login">
 				<input type="text" placeholder="username" name="user"><br>
 				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login">
+				<input type="submit" value="Login">
 				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
-		</div>
+			</div>
+		</form>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
