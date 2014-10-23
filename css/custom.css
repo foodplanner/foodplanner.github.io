@@ -1,0 +1,226 @@
+/*@media all and (max-width: 1200px) { 
+	.h1 {
+		font-size: 1.5em; 
+	}
+}
+@media all and (max-width: 1000px) { 
+	.h1 {
+		font-size: 1.2em; 
+	}
+}
+@media all and (max-width: 700px) { 
+	.h1 {
+		font-size: 0.7em; 
+	}
+}*/
+
+.navbar {
+	padding-left: 5em;
+	color: white;
+}
+.navbar-inverse .navbar-toggle {
+	color: #999;
+	border-color: #999;
+}
+.navbar-inverse .navbar-toggle:hover {
+	background-color: #ddd;
+	color: #333;
+}
+.navbar-inverse .navbar-toggle .glyphicon {
+	color: #999;
+}
+.navbar-inverse .navbar-toggle:hover .glyphicon {
+	color: #333;
+}
+
+footer {
+	padding: 2em 0;
+	margin: 3em 0;
+	border-top: 1px solid #ddd;
+	color: #999;
+	text-align: center;
+	line-height:20%;
+}
+
+.front {
+	text-align:center;
+	top-padding: 20px;
+	position: relative;
+	top:100px;
+}
+
+.front h1 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+
+body {
+	background-color: black;
+	font-family: sans-serif;
+}
+
+#qrcode {
+	width:160px;
+	height:160px;
+	margin-top:2em;
+	display: block;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: .75em;
+}
+
+img {
+	margin-bottom: .5em;
+}
+
+.logo {
+	font-family: 'Shadows Into Light', sans-serif;
+	color: white;
+}
+
+#hidden {
+	visibility: hidden;
+}
+
+input {
+	height: 33px;
+	border-radius: .25em;
+	border-bottom: 50px;
+}
+
+.col-sm-3 {
+	vertical-align: text-bottom;
+	color: white;
+	font-size: 1em;
+	padding-top: 5px;
+}
+
+h2 {
+	font-family: sans-serif;
+	color: white;
+	font-size: 3em;
+}
+
+h3 {
+	color: white;
+}
+
+p {
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Rockwell';
+}
+
+.a {
+	text-align: left;
+}
+
+.hidden{ 
+	visibility: hidden; 
+	padding-left: 2em;
+}
+
+.face {
+	height: 160px;
+	width 126px;
+}
+
+form {
+	text-align: left;
+	color: white;
+}
+
+.signup {
+	color: white;
+	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+	@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.row{
+	position: absolute;
+	top: calc(50% + 10px);
+	left: calc(50% - 400px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% + 125px);
+	left: calc(50% + 100px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
