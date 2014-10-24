@@ -51,32 +51,32 @@
 			</div>
 			<label for="dietinfo">Diet Information</label>
 			<select class="form-control" name="diet">
-				<option value="o1">Non-vegetarian</option>
-				<option value="o1">Vegetarian</option>
-				<option value="o1">Vegan</option>
+				<option value="Non-vegetarian">Non-vegetarian</option>
+				<option value="Vegetarian">Vegetarian</option>
+				<option value="Vegan">Vegan</option>
 			</select>
 			<br>
 			<label for="preference">Personal Cuisine Preference</label>
 			<br>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="ic1" value="o1"> African
+				<input type="checkbox" name="ic[]" value="African"> African
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="ic2" value="o2"> American
+				<input type="checkbox" name="ic[]" value="American"> American
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="ic3" value="o3"> Asian
+				<input type="checkbox" name="ic[]" value="Asian"> Asian
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="ic4" value="o4"> European
+				<input type="checkbox" name="ic[]" value="European"> European
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="ic5" value="o5"> Oceanian
+				<input type="checkbox" name="ic[]" value="Oceanian"> Oceanian
 			</label>
 			<br>
 			<div class="form-group">
-				<label for="weight">Weight</label>
-				<input type="text" class="form-control" id="name" placeholder="Name">
+				<label for="weight">Weight(lbs)</label>
+				<input type="text" class="form-control" name="weight" placeholder="Weight">
 			</div>		
 			<br>
 			<button type="submit" class="btn btn-default">Submit</button>

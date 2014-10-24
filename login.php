@@ -32,7 +32,7 @@ else{
 <th>Weight</th>
 </tr>";
 
-	while($row = mysqli_fetch_array($result)) {
+	while($row = mysql_fetch_array($result)) {
 		echo "<tr>";
 		echo "<td>" . $row['UserID'] . "</td>";
 		echo "<td>" . $row['NAME'] . "</td>";

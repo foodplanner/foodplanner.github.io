@@ -24,7 +24,7 @@ if(!$result){
 	mysql_close();
 }
 else{
-	header('Location: profile.html');
+	header('Location: index.html');
 }
 
 ?>
