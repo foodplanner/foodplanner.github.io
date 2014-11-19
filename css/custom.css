@@ -83,13 +83,12 @@ body {
 	padding-top: 7px;
 }
 
-.background-image {
+.bimg {
 	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 0;
 	display: block;
-	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-position: center;
 	width:auto;
