@@ -1,8 +1,5 @@
 <?php
 $inputname = $_POST["rec"];
-$inputcurr = $_POST["ing"];
-$inputnew = $_POST["new"];
-//$inputpref = $_POST["pref"];
 
 $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
 $dbuser = "kim186_user1";
@@ -16,24 +13,32 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$query = "SELECT * FROM userAccounts WHERE UserID = '$inputuser' AND PASSWORD = '$inputcurr'";
+$sql = "SELECT RecipeName FROM Menu WHERE RecipeName LIKE '%$inputname%'";
+$result = $conn->query($sql);
 
-if($conn->query($query) === FALSE){
-	die("Username or password is invalid");
+if($result->num_rows == 0){
+	echo $inputname;	
+	die("No results!");
+
 	$conn->close();
 }
-else{
-	$change = "UPDATE userAccounts SET PASSWORD='$inputnew'
-WHERE UserID='$inputuser'";
-	if($conn->query($change) === TRUE){
-		echo "Password changed sussessfully";
-	}
-	else{
-		die("Unknow Error!!");
-		$conn->close();
+
+else if($result->num_rows >1){
+	//if multiple result, display a list of links
+	echo "<td> Try one of these: </td><br>";
+	while($row = $result->fetch_assoc()){
+		echo "<td>" . $row['RecipeName'] . "</td><br>";
 	}
 }
+else{
+	$sql = "SELECT Name, Amount FROM Ingredients WHERE RecipeName = '$inputname'";
+	$result = $conn->query($sql);
+	while($row = $result->fetch_assoc()){
 
+		echo "<td>" . $row['Name'] . "     " . $row['Amount'] . "</td><br>";
+	}
+}
+	
 $conn->close();
 
 ?>
