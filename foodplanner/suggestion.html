@@ -10,8 +10,8 @@
 
 	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type='text/javascript' src='js/custom.js'></script>
 </head>
-
 <body>
 	<div class="bimg"></div>
 	<div class="row">
@@ -22,7 +22,7 @@
 					<span class="glyphicon glyphicon-arrow-down"></span>
 					MENU
 				</button>
-				<a class="navbar-brand logo">FOODPLANNER</a>
+				<a class="navbar-brand logo" href="index.html">FOODPLANNER</a>
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
@@ -33,22 +33,24 @@
 			</div>
 		</nav>
 	</div>
-	<div class="square">
-		<div class="smlsq"><p>BETA</p></div>
-		<br><br><br>
-		<h1>FOODPLANNER</h1>
-		<p>Menu, re-imagined.</p>
-		<form method="POST" action="login.php">
-			<div class="login">
-				<input class="len" type="text" placeholder="username" name="user"><br>
-				<input class="len2" type="password" placeholder="password" name="password"><br>
-				<input class="lbtn" type="submit" value="Login">
-				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
+
+	<div class="square3">
+		
+		<form role="form" method="POST" action="signup.php">
+			<div class="suggest">
+				<label for="calories">Calories</label>
+				<input type="number">
+				<label for="diet">Diet Info</label>
+				<select name="diet" required>
+					<option value="Non-vegetarian">Non-vegetarian</option>
+					<option value="Vegetarian">Vegetarian</option>
+					<option value="Vegan">Vegan</option>
+				</select>
 			</div>
+			<div class="smlsq"><p>Suggestion</p></div>
 		</form>
-		<a href="password.html">Forget your password?</a>
 	</div>
-	<br>
+
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>

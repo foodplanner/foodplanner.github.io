@@ -123,6 +123,8 @@ body {
 	border-left: 5px solid white;
 	border-bottom: 5px solid white;
 	padding-top: 7px;
+	float: right;
+	text-align: center;
 }
 
 @media all and (max-width: 700px)
@@ -210,11 +212,7 @@ form {
 	color: white;
 }
 
-.signup {
-	color: white;
-	font-size: 25px;
-	font-family: 'Shadows Into Light', sans-serif;
-}
+
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
@@ -300,6 +298,9 @@ form {
 }
 
 .signup{
+	color: white;
+	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
 	padding: 10px;
 	z-index: 2;
 	margin-left:auto;
@@ -466,4 +467,45 @@ form {
 	font-weight: 400;
 	padding: 8px;
 	margin-bottom: 10px;
+}
+
+.suggest{
+	color: white;
+	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
+	padding: 10px;
+	z-index: 2;
+	margin-left:auto;
+	text-align: center;
+	display:inline;
+	
+}
+
+.suggest input{
+	width: 200px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 8px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.suggest select{
+	width: 200px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 8px;
+	margin-top: -1px;
 }
