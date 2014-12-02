@@ -5,17 +5,14 @@
 	<!-- Bootstrap -->
 	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>	
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
 
-	<script src="/js/respond.js"></script>
+	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type='text/javascript' src='js/custom.js'></script>
-
 </head>
-
 <body>
-	<div class="bimg"></div>
 	<div class="row">
 		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 			<div class="navbar-header">
@@ -28,35 +25,26 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
+					<!--<li><a href="#">Home</a></li>-->
 					<li><a href="#">Menu</a></li>
 					<li><a href="#">Contact Us</a></li>
-					<li><a href="delete.html">Delete User</a></li>
-					<li><a href="password.html">Change Password</a></li>
+					<!--<li><a href="password.html">Change Password</a></li>-->
 				</ul> 
 			</div>
 		</nav>
 	</div>
-	<div class="square">
-		<div class="smlsq"><p>BETA</p></div>
-		<br>
-		<h1>FOODPLANNER</h1>
-		<p>Menu, re-imagined.</p>
-		<form method="POST" action="login.php">
-			<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
-				<input type="submit" value="Login">
-				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
-			</div>
-		</form>
+	<div class="container front">
+		<div class="row">
+			<h1>Username</h1>
+			<ul>
+				<li>Name</li>
+				<li>Personal Preference</li>
+				<li>Diet Info</li>
+				<li>Weight</li>
+			</ul>
+		</div>
 	</div>
-	<br>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script>
-		var images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg'];
-		$('.bimg').css({'background-image': 'url(../img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-	</script>
 </body>

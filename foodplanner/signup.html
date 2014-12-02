@@ -6,7 +6,7 @@
 	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
 
 	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -54,29 +54,20 @@
 					<option value="Vegetarian">Vegetarian</option>
 					<option value="Vegan">Vegan</option>
 				</select>
+				<label for="preference">Personal Cuisine Preference</label>
+			<br>
+				<div class="ci">
+				<input type="checkbox" name="ic[]" value="African"> African
+				<input type="checkbox" name="ic[]" value="American"> American
+				<input type="checkbox" name="ic[]" value="Asian"> Asian
+				<input type="checkbox" name="ic[]" value="European"> European
+				<input type="checkbox" name="ic[]" value="Oceanian"> Oceanian
+				</div>
+			<br>
+			<input type="submit" value="Sign Up">
 			</div>
 
-
-			<br>
-			<label for="preference">Personal Cuisine Preference</label>
-			<br>
-			<label class="checkbox-inline">
-				<input type="checkbox" name="ic[]" value="African"> African
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" name="ic[]" value="American"> American
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" name="ic[]" value="Asian"> Asian
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" name="ic[]" value="European"> European
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" name="ic[]" value="Oceanian"> Oceanian
-			</label>
-			<br>
-			<input type="submit" value="Login">
+			
 		</form>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -84,6 +75,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script>
 		var images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg'];
-		$('.bimg').css({'background-image': 'url(../img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+		$('.bimg').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 	</script>
 </body>
