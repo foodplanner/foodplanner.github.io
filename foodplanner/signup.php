@@ -3,7 +3,6 @@ $inputuser = $_POST["username"];
 $inputpass = $_POST["password"];
 $inputname = $_POST["name"];
 $inputdiet = $_POST["diet"];
-$inputweight = $_POST["weight"];
 $inputpref = "";
 $inputcheck = $_POST['ic'];
 if(!empty($inputcheck)){
@@ -25,8 +24,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql =  "INSERT INTO userAccounts(userID, PASSWORD, NAME, DIETINFO, PREFERENCE, WEIGHT)
-VALUES ('$inputuser', '$inputpass', '$inputname', '$inputdiet', '$inputpref', '$inputweight')";
+$sql =  "INSERT INTO userAccounts(userID, PASSWORD, NAME, DIETINFO, PREFERENCE)
+VALUES ('$inputuser', '$inputpass', '$inputname', '$inputdiet', '$inputpref')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
