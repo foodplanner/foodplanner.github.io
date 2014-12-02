@@ -11,8 +11,10 @@
 	<script src="js/respond.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type='text/javascript' src='js/custom.js'></script>
+	<script src="js/showuserdata.js"></script>
 </head>
 <body>
+	<div class="bimg"></div>
 	<div class="row">
 		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 			<div class="navbar-header">
@@ -25,10 +27,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
-					<!--<li><a href="#">Home</a></li>-->
-					<li><a href="#">Menu</a></li>
-					<li><a href="#">Contact Us</a></li>
-					<!--<li><a href="password.html">Change Password</a></li>-->
+					<li><a href="index.html">Home</a></li>
+					<li><a href="profile.html">My Profile</a></li>
+					<li><a href="search.html">Menu</a></li>
 				</ul> 
 			</div>
 		</nav>
@@ -37,14 +38,18 @@
 		<div class="row">
 			<h1>Username</h1>
 			<ul>
-				<li>Name</li>
+				<li>Name <?php echo $_SESSION['profile_name']; ?>  </li>
 				<li>Personal Preference</li>
 				<li>Diet Info</li>
-				<li>Weight</li>
 			</ul>
 		</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg'];
+		$('.bimg').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+	</script>
+	<?php echo $_SESSION['profile_name']; ?>  
 </body>
