@@ -1,7 +1,4 @@
 <?php
-require_once ('../jpgraph/src/jpgraph.php');
-require_once ('../jpgraph/src/jpgraph_line.php');
-
 $inputuser = $_COOKIE["userid"];
 
 $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
@@ -70,33 +67,60 @@ if(isset($inputuser))
 				</div>
 			</nav>
 		</div>
-		<div class="square2">
-			<div class="row">
-				<h2> Welcome back, <?php echo $row['NAME']?></h2>
-				<p>UserID: <?php echo $inputuser;?></p>
-				<p>Diet Information: <?php echo $row['DIETINFO'];?></p>
-				<img class="imgct" src="gr.php" />
-				<br>
-				<form>
-				
-				</form>
-				<a href="deletePage.php">Delete Account</a><br>
-				<a href="password.html">Change Password</a>
+		<div class="square3">
+			<div class="smlsq"><p>Search</p></div>
+			<form method="POST" action="searchrec.php">
+				<div class="search"  style="float:left;margin-top:8%;">
+					<h2>By Name</h2>
+					<p>If you already have something in mind, just search for the recipe name. We will find the detailed recipe for you.</p>
+					<input type="text" placeholder="Recipe Name" name="rec"><br>
+					<input type="submit" value="Search for recipes">
+				</div>
+			</form>
 
-			</div>
+			<form method="POST" action="searching.php">
+				<div class="search search2" style="float:right;margin-top:6.7%;">
+					<h2>By Ingredients</h2>
+					<p>If you have not decided what to eat, try to search by ingredients. We will generate a menu you like according to your preference. Please also select number of extra ingredients</p>
+					<input type="text" placeholder="ingredients eg. butter, chicken, broccoli" name="ing">
+					<select name="extra" required>
+						<option value="-1">any</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+					</select>
+					<br>
+					<input type="submit" value="Search for recipes">
+				</div>
+			</form>
 		</div>
+
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="js/lightbox.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script>
-			window.onload = showname;
-			window.onload = showpref;
-			var images = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"];
-			$(".bimg").css({"background-image": "url(img/" + images[Math.floor(Math.random() * images.length)] + ")"});
+			var images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg'];
+			$('.bimg').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 		</script>
 	</body>
 </html>
 <?php
-}
-?>
-
+}?>

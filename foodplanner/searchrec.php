@@ -1,4 +1,5 @@
 <?php
+session_start();
 $inputname = $_POST["rec"];
 
 $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
@@ -25,18 +26,20 @@ if($result->num_rows == 0){
 
 else if($result->num_rows >1){
 	//if multiple result, display a list of links
-	echo "<td> Try one of these: </td><br>";
+	$choString = "";
 	while($row = $result->fetch_assoc()){
-		echo "<td>" . $row['RecipeName'] . "</td><br>";
+		if($choString == "")
+			$choString = $row['RecipeName'];
+		else
+			$choString = $choString . "," . $row['RecipeName'];
 	}
+	$_SESSION["choices"] = $choString;
+
+	header("Location: multi_choices.php");
 }
 else{
-	$sql = "SELECT Name, Amount FROM Ingredients WHERE RecipeName = '$inputname'";
-	$result = $conn->query($sql);
-	while($row = $result->fetch_assoc()){
-
-		echo "<td>" . $row['Name'] . "     " . $row['Amount'] . "</td><br>";
-	}
+	$_SESSION["curr_recipe"] = $inputname;
+	header("Location: recipe_detail.php?recname=$inputname");
 }
 	
 $conn->close();

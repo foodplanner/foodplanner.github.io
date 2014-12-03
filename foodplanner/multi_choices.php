@@ -1,26 +1,27 @@
 <?php
-require_once ('../jpgraph/src/jpgraph.php');
-require_once ('../jpgraph/src/jpgraph_line.php');
-
+session_start();
+$result = $_SESSION["choices"];
 $inputuser = $_COOKIE["userid"];
 
 $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
 $dbuser = "kim186_user1";
 $dbpwd = "cs411";
 $db = "kim186_cs411";
+
+// Create connection
 $conn = new mysqli($dbhost, $dbuser, $dbpwd, $db);
 // Check connection
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM userAccounts WHERE UserID = '$inputuser'";
-$result = $conn->query($sql);
+$recArray = explode(",", $result);
 
-$row = $result->fetch_assoc();
+$sqluser = "SELECT * FROM userAccounts WHERE UserID = '$inputuser'";
+$result2 = $conn->query($sqluser);
+$row = $result2->fetch_assoc();
 
-if(isset($inputuser)) 
-{?>
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -69,21 +70,14 @@ if(isset($inputuser))
 					</ul> 
 				</div>
 			</nav>
-		</div>
-		<div class="square2">
-			<div class="row">
-				<h2> Welcome back, <?php echo $row['NAME']?></h2>
-				<p>UserID: <?php echo $inputuser;?></p>
-				<p>Diet Information: <?php echo $row['DIETINFO'];?></p>
-				<img class="imgct" src="gr.php" />
-				<br>
-				<form>
-				
-				</form>
-				<a href="deletePage.php">Delete Account</a><br>
-				<a href="password.html">Change Password</a>
-
-			</div>
+		</div>		
+		<div class="square4">
+			<h1>Try One of These:</h1>
+			<?php
+foreach ($recArray as $value) {
+	echo '<p><a href="recipe_detail.php?recname='.$value.'">'.$value.'</a></p>';
+}
+			?>
 		</div>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="js/lightbox.js"></script>
@@ -96,7 +90,3 @@ if(isset($inputuser))
 		</script>
 	</body>
 </html>
-<?php
-}
-?>
-

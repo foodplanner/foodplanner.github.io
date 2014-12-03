@@ -1,4 +1,5 @@
 <?php
+session_start();
 $inputing = $_POST["ing"];
 $inputint = $_POST["extra"];
 	
@@ -93,12 +94,18 @@ if(sizeof($finalVector) == 0){
 }
 
 else{
-	foreach($finalVector as &$itemthing){
-		echo $itemthing . "<br>";
-	}
-}
-echo sizeof($finalVector);
 
+	$choString = "";
+	foreach($finalVector as &$itemthing){
+		if($choString == "")
+			$choString = $itemthing;
+		else
+			$choString = $choString . "," . $itemthing;
+	}
+	$_SESSION["choices"] = $choString;
+
+	header("Location: multi_choices.php");
+}
 
 $conn->close();
 

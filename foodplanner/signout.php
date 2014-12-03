@@ -1,3 +1,6 @@
 <?php
-setcookie("userid", "Guest", time() - 1000);
+if(isset($_COOKIE['userid'])){
+	setcookie('userid', '', time()-(86400 * 30), '/');
+	header("Location: index.php");
+}
 ?>

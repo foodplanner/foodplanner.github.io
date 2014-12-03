@@ -29,10 +29,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="profile.php">My Profile</a></li>
-					<li><a href="search.html">Search Recipe</a></li>
-					<li><a href="suggestion.html">Need Suggestion</a></li>
+					<li><a href="index.php">Home</a></li>
 				</ul> 
 			</div>
 		</nav>
@@ -41,28 +38,20 @@
 		<div class="smlsq"><p>SIGN UP</p></div>
 		<form role="form" method="POST" action="signup.php">
 			<div class="signup">
+				<br><br><br>
 				<label for="username">Username</label>
 				<input pattern=".{5,}" required title="5 characters minimum" type="text" placeholder="username" name="username">
 				<label for="password">Password</label>
 				<input pattern=".{8,}" required title="8 characters minimum" type="password" placeholder="password" name="password">
-				<label pattern=".{1,50}" required title="1 characters minimum" for="name">Name</label>
-				<input type="text" name="name" placeholder="name">
+				<label for="name">Name</label>
+				<input pattern=".{1,50}" required title="1 characters minimum" type="text" name="name" placeholder="name">
 				<label for="diet">Diet Information</label>
 				<select name="diet" required>
 					<option value="Non-vegetarian">Non-vegetarian</option>
 					<option value="Vegetarian">Vegetarian</option>
 					<option value="Vegan">Vegan</option>
 				</select>
-				<label for="preference" required>Personal Cuisine Preference</label>
-			<br>
-				<div class="ci">
-					<label><input class="a" type="checkbox" name="ic[]" value="African"> African</label>
-					<label><input class="a" type="checkbox" name="ic[]" value="American"> American</label>
-					<label><input class="a" type="checkbox" name="ic[]" value="Asian"> Asian</label>
-					<label><input class="a" type="checkbox" name="ic[]" value="European"> European</label>
-					<label><input class="a" type="checkbox" name="ic[]" value="Oceanian"> Oceanian</label>
-				</div>
-			<br>
+			<br><br>
 			<input type="submit" value="Sign Up">
 			</div>
 

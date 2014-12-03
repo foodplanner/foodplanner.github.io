@@ -70,31 +70,24 @@ if(isset($inputuser))
 				</div>
 			</nav>
 		</div>
-		<div class="square2">
-			<div class="row">
-				<h2> Welcome back, <?php echo $row['NAME']?></h2>
-				<p>UserID: <?php echo $inputuser;?></p>
-				<p>Diet Information: <?php echo $row['DIETINFO'];?></p>
-				<img class="imgct" src="gr.php" />
-				<br>
-				<form>
-				
-				</form>
-				<a href="deletePage.php">Delete Account</a><br>
-				<a href="password.html">Change Password</a>
-
+	<div class="square">
+		<form method="POST" action="delete.php">
+			<div class="login">
+				<input type="text" placeholder="Username" name="user"><br>
+				<input type="password" placeholder="Password" name="password"><br>
+				<input type="submit" value="Submit">
 			</div>
-		</div>
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="js/lightbox.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script>
+		</form>
+	</div>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
 			window.onload = showname;
 			window.onload = showpref;
 			var images = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"];
 			$(".bimg").css({"background-image": "url(img/" + images[Math.floor(Math.random() * images.length)] + ")"});
 		</script>
-	</body>
 </html>
 <?php
 }

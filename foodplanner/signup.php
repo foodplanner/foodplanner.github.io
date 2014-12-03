@@ -3,14 +3,6 @@ $inputuser = $_POST["username"];
 $inputpass = $_POST["password"];
 $inputname = $_POST["name"];
 $inputdiet = $_POST["diet"];
-$inputpref = "";
-$inputcheck = $_POST['ic'];
-if(!empty($inputcheck)){
-	$N = count($inputcheck);
-	for($i=0; $i < $N; $i++){
-    	$inputpref = $inputpref . $inputcheck[$i] . " ";
-	}
-}
 
 $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
 $dbuser = "kim186_user1";
@@ -24,8 +16,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql =  "INSERT INTO userAccounts(userID, PASSWORD, NAME, DIETINFO, PREFERENCE)
-VALUES ('$inputuser', '$inputpass', '$inputname', '$inputdiet', '$inputpref')";
+$sql = "SELECT COUNT(*) as countNumber FROM userAccounts WHERE userAccounts.UserID = '$inputuser'";
+$result = $conn->query($sql);
+$count = '';
+while($row = $result->fetch_assoc()){
+	$count = $row['countNumber'];
+}
+
+if($count == '0'){
+	$sql =  "INSERT INTO userAccounts(userID, PASSWORD, NAME, DIETINFO)
+	VALUES ('$inputuser', '$inputpass', '$inputname', '$inputdiet')";
 
 if ($conn->query($sql) === TRUE) {
 	setcookie("userid", $inputuser, time() + (86400 * 30), "/");
@@ -33,7 +33,10 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+}
+else{
+	echo "Already Exists";
+}
 $conn->close();
 
 ?>
