@@ -6,19 +6,17 @@ $dbhost = "engr-cpanel-mysql.engr.illinois.edu";
 $dbuser = "kim186_user1";
 $dbpwd = "cs411";
 $db = "kim186_cs411";
-$connection = mysql_connect($dbhost, $dbuser, $dbpwd);
+$conn = new mysqli($dbhost, $dbuser, $dbpwd, $db);
 
 // Check connection
-if (!$connection) {
-	die("Connection failed.");
-	mysql_close();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 } 
-@mysql_select_db($db) or ("Database not found");
 
-$query = "SELECT * FROM userAccounts WHERE UserID = '$inputuser' AND PASSWORD = '$inputpass'";
-$result = mysql_query($query);
+$sql = "SELECT NAME FROM userAccounts WHERE UserID = '$inputuser' AND PASSWORD = '$inputpass'";
+$result = $conn->query($sql);
 
-if(!$result){
+if($result->num_rows == 0){
 	die("Username or password is invalid");
 	mysql_close();
 }
