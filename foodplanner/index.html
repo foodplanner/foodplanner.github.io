@@ -1,3 +1,7 @@
+<?php
+setcookie("userid", "Guest", time() + (86400 * 30), "/"); 
+?>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>FoodPlanner</title>
@@ -27,15 +31,16 @@
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="profile.html">My Profile</a></li>
-					<li><a href="search.html">Menu</a></li>
+					<li><a href="profile.php">My Profile</a></li>
+					<li><a href="search.html">Search Recipe</a></li>
+					<li><a href="suggestion.html">Need Suggestion</a></li>
 				</ul> 
 			</div>
 		</nav>
 	</div>
 	<div class="square">
 		<div class="smlsq"><p>BETA</p></div>
-		<br><br><br>
+		<br>
 		<h1>FOODPLANNER</h1>
 		<p>Menu, re-imagined.</p>
 		<form method="POST" action="login.php">
@@ -46,7 +51,6 @@
 				<input type="button" value="Sign Up" onclick="location.href = 'signup.html'">
 			</div>
 		</form>
-		<a href="password.html">Forget your password?</a>
 	</div>
 	<br>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -57,3 +61,4 @@
 		$('.bimg').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 	</script>
 </body>
+</html>

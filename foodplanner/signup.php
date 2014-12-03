@@ -28,7 +28,8 @@ $sql =  "INSERT INTO userAccounts(userID, PASSWORD, NAME, DIETINFO, PREFERENCE)
 VALUES ('$inputuser', '$inputpass', '$inputname', '$inputdiet', '$inputpref')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+	setcookie("userid", $inputuser, time() + (86400 * 30), "/");
+    header("Location: profile.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

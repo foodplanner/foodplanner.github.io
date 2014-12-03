@@ -23,25 +23,8 @@ if(!$result){
 	mysql_close();
 }
 else{
-	echo "<table border='1'>
-<tr>
-<th>Username</th>
-<th>Name</th>
-<th>Diet Information</th>
-<th>Personal Cuisine Preference</th>
-<th>Weight</th>
-</tr>";
-
-	while($row = mysql_fetch_array($result)) {
-		echo "<tr>";
-		echo "<td>" . $row['UserID'] . "</td>";
-		echo "<td>" . $row['NAME'] . "</td>";
-		echo "<td>" . $row['DIETINFO'] . "</td>";
-		echo "<td>" . $row['PREFERENCE'] . "</td>";
-		echo "<td>" . $row['WEIGHT'] . "</td>";
-		echo "</tr>";
-	}
-	echo "</table>";
+	setcookie("userid", $inputuser, time() + (86400 * 30), "/");
+    header("Location: profile.php");
 }
 
 ?>
