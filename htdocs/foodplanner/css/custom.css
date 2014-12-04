@@ -1,0 +1,568 @@
+/*@media all and (max-width: 1200px) { 
+.h1 {
+font-size: 1.5em; 
+}
+}
+@media all and (max-width: 1000px) { 
+.h1 {
+font-size: 1.2em; 
+}
+}
+@media all and (max-width: 700px) { 
+.h1 {
+font-size: 0.7em; 
+}
+}*/
+::-webkit-input-placeholder { /* WebKit browsers */
+	color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #fff;
+	opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #fff;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    #ff;
+}
+
+.navbar {
+	padding-left: 5em;
+	color: white;
+}
+.navbar-inverse .navbar-toggle {
+	color: #999;
+	border-color: #999;
+}
+.navbar-inverse .navbar-toggle:hover {
+	background-color: #ddd;
+	color: #333;
+}
+.navbar-inverse .navbar-toggle .glyphicon {
+	color: #999;
+}
+.navbar-inverse .navbar-toggle:hover .glyphicon {
+	color: #333;
+}
+
+
+body {
+	font-family: sans-serif;
+	position:relative;
+}
+
+.square{
+	text-align:center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	height: 500px;
+	border: 5px solid white;
+	margin-top: 6%;
+	top-padding: 20px;
+	top:100px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.square h1 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+
+.square2{
+	text-align:center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	height: 850px;
+	border: 5px solid white;
+	margin-top: 6%;
+	top-padding: 20px;
+	top:100px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.square2 h1 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+
+.square3 {
+	text-align:center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1100px;
+	height: 650px;
+	border: 5px solid white;
+	margin-top: 6%;
+	top-padding: 20px;
+	top:100px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.square3 h2 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+
+.square4 {
+	text-align:center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	min-height: 500px;
+	border: 5px solid white;
+	margin-top: 6%;
+	top-padding: 20px;
+	top:100px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.square4 h1 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+
+.square5 {
+	text-align:center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1100px;
+	height: 100px;
+	border: 5px solid white;
+	margin-top: 6%;
+	top-padding: 20px;
+	top:100px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.square5 h2 {
+	font-size: 5em;
+	color: white;
+	margin-bottom: .5em;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+.smlsq{
+	margin-left: auto;
+	width: 150px;
+	height: 50px;
+	border-left: 5px solid white;
+	border-bottom: 5px solid white;
+	padding-top: 7px;
+	float: right;
+	text-align: center;
+}
+
+@media all and (max-width: 700px)
+{
+	.square{
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%%;
+		height: 50%;
+		border: 5px solid white;
+		margin-top: 8%;
+	}
+}
+
+.bimg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	width:auto;
+	height: 1280px;
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+	background-image: url(../img/bg1.jpg)
+}
+
+img {
+	margin-bottom: .5em;
+}
+
+.logo {
+	font-family: 'Shadows Into Light', sans-serif;
+	color: white;
+}
+
+#hidden {
+	visibility: hidden;
+}
+
+.col-sm-3 {
+	vertical-align: text-bottom;
+	color: white;
+	font-size: 1em;
+	padding-top: 5px;
+}
+
+h2 {
+	font-family: 'Shadows Into Light', sans-serif;
+	color: white;
+	font-size: 3em;
+}
+
+h3 {
+	color: white;
+}
+
+p {
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Rockwell';
+}
+
+.a {
+	text-align: left;
+}
+
+.hidden{ 
+	visibility: hidden; 
+	padding-left: 2em;
+}
+
+.face {
+	height: 160px;
+	width 126px;
+}
+
+form {
+	text-align: left;
+	color: white;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.login{
+	padding: 10px;
+	z-index: 2;
+	margin-left:auto;
+	text-align: center;
+}
+
+.login input{
+	width: 500px;
+	height: 45px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 8px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 250px;
+	height: 45px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgba(0,0,0,0.6);
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.5;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=submit]{
+	width: 240px;
+	height: 45px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgba(0,0,0,0.6);
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=submit]:hover{
+	opacity: 0.5;
+}
+
+.login input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+.signup{
+	color: white;
+	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
+	padding: 10px;
+	z-index: 2;
+	margin-left:auto;
+	text-align: center;
+}
+
+.signup input{
+	width: 600px;
+	height: 45px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.signup select{
+	width: 600px;
+	height: 45px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.signup input[type=button]{
+	width: 250px;
+	height: 45px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgba(0,0,0,0.6);
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.signup input[type=button]:hover{
+	opacity: 0.5;
+}
+
+.signup input[type=button]:active{
+	opacity: 0.6;
+}
+
+.signup input[type=submit]{
+	width: 240px;
+	height: 45px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgba(0,0,0,0.6);
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.signup input[type=submit]:hover{
+	opacity: 0.5;
+}
+
+.signup input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.signup input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.signup input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.signup input[type=button]:focus{
+	outline: none;
+}
+
+.singup label{
+	text-align: left;
+	font-size: 10px;
+}
+
+.signup .ci {
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+}
+
+.signup .a {
+	height: 20px;
+	width: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+
+.search{
+	width: 530px;
+	height:300px;
+	padding: 10px;
+	z-index: 2;
+	text-align: center;
+}
+
+.search input[type=text]{
+	width: 400px;
+	height: 45px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.search input[type=submit]{
+	width: 240px;
+	height: 45px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgba(0,0,0,0.6);
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.search input[type=submit]:hover{
+	opacity: 0.5;
+}
+
+.search input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.search2 select{
+	height: 45px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.suggest{
+	color: white;
+	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
+	padding: 10px;
+	z-index: 2;
+	margin-left:auto;
+	text-align: center;
+	display:inline;
+
+}
+
+.suggest input{
+	width: 200px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 8px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.suggest select{
+	width: 200px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Shadows Into Light', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 8px;
+	margin-top: -1px;
+}
+
+.nsbtn {
+	border: 0;
+	outline: 0;
+	background: none;
+	color: black;
+	margin-left: 15px;
+}
+
+.navbar-right{
+	margin-right: 100px;
+}
+
+.imgct {
+	text-align: center;
+}
